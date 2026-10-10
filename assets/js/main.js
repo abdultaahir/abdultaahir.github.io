@@ -66,15 +66,15 @@ if(pg){
 
 // Testimonials: all four, one card step at a time, auto-slide, visible counter.
 const testimonials=[
- {q:'Our outreach emails were getting opened, but nobody was replying because they sounded too templated and impersonal. Tahir completely rewrote our campaigns using a natural, conversational tone and clear curiosity-driven hooks. The short structure made a massive difference—it actually sounds like a human reaching out now. Highly recommend him for B2B lead gen.',n:'Founder',r:'GrowthLab'},
- {q:'Candidates know when they are being spammed with generic recruiting templates, and it was hurting our reply rates. Tahir stepped in and completely changed our approach by using curiosity-led openings and a conversational tone that feels like a real person reaching out. His soft, low-pressure CTAs invite a response rather than forcing a pitch, which completely revived our candidate pipeline.',n:'Director of Recruiting',r:'TalentBridge'},
- {q:'Like most SaaS companies, we spent all our time on the product and our email copy became an afterthought. We were just listing features and not making prospects feel anything. Tahir helped us pivot to a conversational, curiosity-driven approach that actually converts cold prospects into booked demos.',n:'CEO',r:'InvoiceFlow'},
- {q:'We were sending 5-paragraph AI essays with tracking links, and our deliverability was tanking. Tahir stripped our campaigns down to the bone—plain text, zero links, and strictly under 40 words. By moving us to signal-based prospecting, we only reach out when a target company hits a specific growth signal. It saved our domain reputation and got VP-level prospects actually replying.',n:'VP of Sales',r:'ScaleOps'}
+ {q:'Our outreach emails were opened, but nobody responded since they were too templated and impersonal. Tahir rewrote our campaigns with a natural and conversational tone and curiosity based hooks. Short structure made a huge difference. It feels like a real person is contacting you. Highly recommend for B2B lead generation.',n:'Founder',r:'GrowthLab'},
+ {q:'Candidates know when they are being spammed with generic recruiting templates, and it affected our reply rate. Tahir came to our rescue and helped to change the approach to curiosity led openings and a conversational tone that feels like a real person is contacting you. Soft and low pressure CTAs helped to revive our candidate pipeline.',n:'Director of Recruiting',r:'TalentBridge'},
+ {q:'Like many other SaaS companies, we were focusing on the product and email copy was an afterthought. We just listed features and did not make prospects feel anything. Tahir helped us to switch to a conversational and curiosity based approach that actually converts cold prospects to booked demos.',n:'CEO',r:'InvoiceFlow'},
+ {q:'We were sending five paragraph AI essays with tracking links and our deliverability rate was poor. Tahir helped to simplify our campaigns. Plain text, no links, and under 40 words. By using signal based prospecting, we reach out only when a target company shows a certain growth signal. It saved our domain reputation and got VP level prospects replying.',n:'VP of Sales',r:'ScaleOps'}
 ];
 const tt=$('#testimonial-track'),status=$('#testimonial-status');
 let testimonialIndex=0,testimonialTimer=null;
 if(tt){
-  tt.innerHTML=testimonials.map((t,i)=>`<figure class="card quote" data-index="${i}"><span class="eyebrow">Client feedback</span><blockquote>“${t.q}”</blockquote><footer><div><strong>${t.n}</strong><br><small>${t.r}</small></div><span class="badge">Verified project quote</span></footer></figure>`).join('');
+  tt.innerHTML=testimonials.map((t,i)=>`<figure class="card quote" data-index="${i}"><span class="eyebrow">Client feedback</span><blockquote>${t.q}</blockquote><footer><div><strong>${t.n}</strong><br><small>${t.r}</small></div><span class="badge">Verified project quote</span></footer></figure>`).join('');
 }
 function updateTestimonialStatus(){if(status)status.textContent=`${testimonialIndex+1} / ${testimonials.length}`}
 function goTestimonial(index,behavior='smooth'){
